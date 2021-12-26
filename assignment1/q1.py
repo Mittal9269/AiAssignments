@@ -48,7 +48,6 @@ def bfs():
 
 
 def dfs(x , y , length):
-    file1.write(str(x) + " " + str(y) + "\n")
     if(lines[x][y] == "*"):
         list_of_dfs[0] = x
         list_of_dfs[1] = y
@@ -63,7 +62,6 @@ def dfs(x , y , length):
     for k in range(4):
         i,j = x + moveJ[k], y + moveI[k]
         if(isValid(i , j) and visited[i][j] == 0):
-            # print(i , j)
             parent[i][j][0] = x
             parent[i][j][1] = y
             dfs(i , j , length + 1)
@@ -84,12 +82,10 @@ def dfid(x , y , limit):
         return False
 
     visited[x][y] = 1
-    # if(list_of_dfs[3] == 0):
     list_of_dfs[2] += 1 
     for k in range(4):
         i,j = x + moveJ[k], y + moveI[k]
         if(isValid(i , j) and visited[i][j] == 0):
-            # print(i , j)
             parent[i][j][0] = x
             parent[i][j][1] = y
             if dfid(i , j , limit - 1) == True:
@@ -103,7 +99,6 @@ def dfid_unil():
     while(1):
         list_of_dfs[0] = 0
         list_of_dfs[1] = 0
-        # list_of_dfs[2] = 0
         list_of_dfs[3] = 0
 
         for i in range(len(lines)):   # creation of the parent matrix
@@ -148,9 +143,8 @@ for i in range(len(lines)):   # creation of the parent matrix
 
 for i in lines:
     temp_line.append(list(i))
-lines = temp_line  # converting lines from string to list data type
+lines = temp_line  # converting lines from string to list data type besause string is immutable in python
 
-# file1 = open("output.txt" , "w")
 for i in range(len(lines)):
     visited.append([0]*len(lines[0]))
 
@@ -168,7 +162,7 @@ if(initial_number == 0):
 
 elif(initial_number == 1):
     dfs(0 , 0 , 0)
-    print(list_of_dfs)
+    # print(list_of_dfs)
     length = PathFind(list_of_dfs[0], list_of_dfs[1])
     length += 1
     print(list_of_dfs[2])
@@ -179,8 +173,7 @@ elif(initial_number == 1):
 
 else:
     dfid_unil()
-    # print(dfid())
-    print(list_of_dfs)
+    # print(list_of_dfs)
     length = PathFind(list_of_dfs[0], list_of_dfs[1])
     length += 1
     print(list_of_dfs[2])
@@ -188,5 +181,3 @@ else:
     for i in lines:
         i = ''.join(map(str , i))
         print(i)
-
-# file1.close()
