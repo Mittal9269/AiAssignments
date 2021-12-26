@@ -1,36 +1,46 @@
 import sys
 from collections import deque
+from queue import Queue
 
 moveI = [1 , -1 , 0 , 0]
 moveJ = [0 ,  0, 1,  -1]
 
+
+
 def isValid(i , j ):
     m = len(lines)
     n = len(lines[0])
-    if(i >= 0 and i < m and j >= 0 and j < m and lines[i][j] == ' '):
+    if(i >= 0 and i < m and j >= 0 and j < n and lines[i][j] == ' '):
+        # print("somef ")
         return 1
     return 0
+
+
 
 def bfs():
     m = len(lines)
     n = len(lines[0])
-    queue = deque([])
-    queue.append([0 , 0])
-    # visited = []
-    # for i in range(m):
-    #     visited.append([0]*n)
-    # visited[0][0] = 1
-    while(len(queue)):
-        temp = queue.popleft()
+    # queue = deque([])
+    q = Queue(maxsize = m*n)
+    q.put([0 , 0])
+    visited = []
+    for i in range(m):
+        visited.append([0]*n)
+    visited[0][0] = 1
+    # print(visited)
+    while(not(q.empty())):
+        print("time")
+        temp = q.get()
         if(lines[temp[0]][temp[1]] == "*"):
-            return temp[0],temp[1]
+            return temp
 
         for k in range(4):
             i ,j = temp[0] + moveI[k] , temp[1] + moveJ[k]
-            if(isValid(i , j)):
-                queue.append([i , j])
-                lines[i][j] = '+'
-                # visited[temp[0] + moveI[i]][temp[0] + moveI[i]]
+            if(isValid(i , j) and visited[i][j] == 0):
+                q.put([i , j])
+                visited[i][j] = 1
+
+    return -1
 
 
 def dfs():
