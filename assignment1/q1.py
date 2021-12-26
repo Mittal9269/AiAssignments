@@ -48,7 +48,6 @@ def bfs():
 
 
 def dfs(x , y , length):
-    file1.write(str(x) + " " + str(y) + "\n")
     if(lines[x][y] == "*"):
         list_of_dfs[0] = x
         list_of_dfs[1] = y
