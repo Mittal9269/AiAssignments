@@ -71,8 +71,57 @@ def dfs(x , y , length):
     
 
 
-def dfid():
-    pass
+
+def dfid(x , y , limit):
+    if(lines[x][y] == "*"):
+        list_of_dfs[0] = x
+        list_of_dfs[1] = y
+        list_of_dfs[2] += 1
+        list_of_dfs[3] = 1
+        return True
+
+    if limit <= 0:
+        return False
+
+    visited[x][y] = 1
+    # if(list_of_dfs[3] == 0):
+    list_of_dfs[2] += 1 
+    for k in range(4):
+        i,j = x + moveJ[k], y + moveI[k]
+        if(isValid(i , j) and visited[i][j] == 0):
+            # print(i , j)
+            parent[i][j][0] = x
+            parent[i][j][1] = y
+            if dfid(i , j , limit - 1) == True:
+                return True
+
+    return False
+    
+
+def dfid_unil():
+    limit = 0
+    while(1):
+        list_of_dfs[0] = 0
+        list_of_dfs[1] = 0
+        # list_of_dfs[2] = 0
+        list_of_dfs[3] = 0
+
+        for i in range(len(lines)):   # creation of the parent matrix
+            for j in range(len(lines[0])):
+                parent[i][j][0] = 0
+                parent[i][j][1] = 0
+
+
+        for i in range(len(lines)):
+            for j in range(len(lines[0])):
+                visited[i][j] = 0
+        
+
+        if(dfid(0 , 0 , limit)):
+            break
+        else:
+            limit += 1 
+
 
 
 file1 = open(sys.argv[1], 'r')
@@ -101,7 +150,7 @@ for i in lines:
     temp_line.append(list(i))
 lines = temp_line  # converting lines from string to list data type
 
-file1 = open("output.txt" , "w")
+# file1 = open("output.txt" , "w")
 for i in range(len(lines)):
     visited.append([0]*len(lines[0]))
 
@@ -129,6 +178,15 @@ elif(initial_number == 1):
         print(i)
 
 else:
-    print(dfid())
+    dfid_unil()
+    # print(dfid())
+    print(list_of_dfs)
+    length = PathFind(list_of_dfs[0], list_of_dfs[1])
+    length += 1
+    print(list_of_dfs[2])
+    print(length)
+    for i in lines:
+        i = ''.join(map(str , i))
+        print(i)
 
-file1.close()
+# file1.close()
