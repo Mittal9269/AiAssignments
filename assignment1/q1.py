@@ -5,7 +5,6 @@ moveJ = [1, -1, 0, 0]  # movement along the rows
 moveI = [0, 0, 1,  -1]  # movement along the columns
 # the above combination follows the DURL preference order: Down > Up > Right > Left
 
-
 def isValid(i, j):
     m = len(lines)
     n = len(lines[0])
@@ -27,15 +26,9 @@ def PathFind(i, j):
 
 
 def bfs():
-    m = len(lines)
-    n = len(lines[0])
     length = 0
     queue = deque([])
     queue.append([0, 0])
-    visited = []
-    for i in range(m):  # creation of the visited matrix
-        visited.append([0]*n)
-
     while queue:
         temp = queue.popleft()
         if(visited[temp[0]][temp[1]] == 1):
@@ -46,40 +39,36 @@ def bfs():
             return temp[0] , temp[1],  length
 
         for k in range(4):
-            i, j = temp[0] + moveI[k], temp[1] + moveJ[k]
+            i, j = temp[0] + moveJ[k], temp[1] + moveI[k]
             if(isValid(i, j) and visited[i][j] == 0):
                 parent[i][j][0] = temp[0]
                 parent[i][j][1] = temp[1]
-                # if(lines[i][j] == "*"):
-                #     return i, j , length
                 queue.append([i, j])
 
 
-def dfs():
-    m = len(lines)
-    n = len(lines[0])
-    length = 0
-    stack = deque([])
-    stack.append([0, 0])
-    visited = []
-    for i in range(m):
-        visited.append([0]*n)
 
-    while stack:
-        temp = stack.pop()
-        if(visited[temp[0]][temp[1]] == 1):
-            continue
-        visited[temp[0]][temp[1]] = 1
-        length += 1 
-        if(lines[temp[0]][temp[1]] == "*"):
-            return temp[0] , temp[1] , length
+def dfs(x , y , length):
+    file1.write(str(x) + " " + str(y) + "\n")
+    if(lines[x][y] == "*"):
+        list_of_dfs[0] = x
+        list_of_dfs[1] = y
+        list_of_dfs[2] += 1
+        list_of_dfs[3] = 1
+        
+        return
 
-        for k in range(4):
-            i, j = temp[0] + moveI[k], temp[1] + moveJ[k]
-            if(isValid(i, j) and visited[i][j] == 0):
-                parent[i][j][0] = temp[0]
-                parent[i][j][1] = temp[1]
-                stack.append([i, j])
+    visited[x][y] = 1
+    if(list_of_dfs[3] == 0):
+        list_of_dfs[2] += 1 
+    for k in range(4):
+        i,j = x + moveJ[k], y + moveI[k]
+        if(isValid(i , j) and visited[i][j] == 0):
+            # print(i , j)
+            parent[i][j][0] = x
+            parent[i][j][1] = y
+            dfs(i , j , length + 1)
+        
+    
 
 
 def dfid():
@@ -100,6 +89,7 @@ for line in Lines:
 
 temp_line = []
 parent = []
+visited = []
 
 for i in range(len(lines)):   # creation of the parent matrix
     temp = []
@@ -111,8 +101,11 @@ for i in lines:
     temp_line.append(list(i))
 lines = temp_line  # converting lines from string to list data type
 
-file = open("output.txt" , "w")
+file1 = open("output.txt" , "w")
+for i in range(len(lines)):
+    visited.append([0]*len(lines[0]))
 
+list_of_dfs = [0 , 0 , 0 , 0]
 
 if(initial_number == 0):
     i, j , leng = bfs()
@@ -123,21 +116,19 @@ if(initial_number == 0):
     for i in lines:
         i = ''.join(map(str , i))
         print(i)
-        # for j in i:
-        #     print(j, end="")  # note that this works only in python3
-        # print("\n")
 
 elif(initial_number == 1):
-    i, j , leng = dfs()
-    length = PathFind(i, j)
+    dfs(0 , 0 , 0)
+    print(list_of_dfs)
+    length = PathFind(list_of_dfs[0], list_of_dfs[1])
     length += 1
-    print(leng)
+    print(list_of_dfs[2])
     print(length)
     for i in lines:
         i = ''.join(map(str , i))
         print(i)
-        # for j in i:
-        #     print(j, end="")  # note that this works only in python3
-        # print("\n")
+
 else:
     print(dfid())
+
+file1.close()
