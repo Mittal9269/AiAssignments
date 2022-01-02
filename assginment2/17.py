@@ -3,6 +3,7 @@ from queue import PriorityQueue
 import copy
 
 
+
 def randomGenerate():
     state = [[], [], []]
     random.shuffle(number_list)
@@ -11,16 +12,27 @@ def randomGenerate():
         state[column].append(i)
     return state
 
+
+
+
+
 def printState(current_state, length):
+
     print("current State " + str(length))
+
     for state in current_state:
         print(state)
 
-def HightHeuristic(current_state, final_state):
+
+
+def HeightHeuristic(current_state, final_state):
+
     state_value = 0
 
     length_current_state = len(current_state)
+
     for stack_position in range(length_current_state):
+
         length_current_stack = len(current_state[stack_position])
 
         for element_pos in range(length_current_stack):
@@ -38,7 +50,10 @@ def HightHeuristic(current_state, final_state):
 
     return -1*state_value
 
-def HightSqareHeuristic(current_state, final_state):
+
+
+
+def HeightSquareHeuristic(current_state, final_state):
     state_value = 0
 
     length_current_state = len(current_state)
@@ -59,6 +74,9 @@ def HightSqareHeuristic(current_state, final_state):
                 state_value -= (element_pos + 1)**2
 
     return -1*state_value
+
+
+
 
 def StateHeuristic(current_state, final_state):
     state_value = 0
@@ -91,35 +109,43 @@ def StateHeuristic(current_state, final_state):
 
 
 
-def CallWhichHeurastic(current_state, final_state, index):
+def CallWhichHeuristic(current_state, final_state, index):
     if(index == 1):
         return StateHeuristic(current_state, final_state)
 
     elif(index == 2):
-        return HightHeuristic(current_state, final_state)
+        return HeightHeuristic(current_state, final_state)
     
     else:
-        return HightSqareHeuristic(current_state , final_state)
+        return HeightSquareHeuristic(current_state , final_state)
+
+
+
 
 
 def nextGenfunctionHelper(current_list, index, finalState, WhichHeurestic):
     list_of_neibors = []
 
-    temp_list = copy.deepcopy(current_list)
+    temp_list1 = copy.deepcopy(current_list)
+    temp_list2 = copy.deepcopy(current_list)
+
     last_number = current_list[index][len(current_list[index]) - 1]
-    temp_list[index].pop()
-    temp_list[(index+1) % 3].append(last_number)
-    list_of_neibors.append(
-        [CallWhichHeurastic(temp_list, finalState, WhichHeurestic), temp_list])
 
-    temp_list[(index+1) % 3].pop()
-    temp_list[(index+2) % 3].append(last_number)
-    list_of_neibors.append(
-        [CallWhichHeurastic(temp_list, finalState, WhichHeurestic), temp_list])
+    temp_list1[index].pop()
+    temp_list2[index].pop()
 
-    # print("dvn" , list_of_neibors)
+    temp_list1[(index+1) % 3].append(last_number)
+    temp_list2[(index+2) % 3].append(last_number)
+
+    val1 = CallWhichHeuristic(temp_list1, finalState, WhichHeurestic)
+    val2 = CallWhichHeuristic(temp_list2, finalState, WhichHeurestic)
+
+    list_of_neibors.append([val1, temp_list1])
+    list_of_neibors.append([val2, temp_list2])
+
 
     return list_of_neibors
+
 
 
 def nextGenfunction(current_list, finalState, WhichHeurestic):
@@ -139,35 +165,96 @@ def nextGenfunction(current_list, finalState, WhichHeurestic):
     return list_of_neibors
 
 
+
+
+def FindPath(parent , finalState , intitalSate):
+
+    temp_intial = []
+    for states in intitalSate:
+        temp_intial.append(tuple(states))
+
+    intitalSate = tuple(temp_intial)
+
+    temp_final = []
+    for states in finalState:
+        temp_final.append(tuple(states))
+
+    finalState = tuple(temp_final)
+
+
+
+
+    pathArray = []
+    while(True):
+
+        pathArray.append(copy.deepcopy(finalState))
+        if(finalState == intitalSate):
+            print("length of the path is " + str(len(pathArray)))
+            pathArray.reverse()
+            for states_postion in range(len(pathArray)):
+                printState(pathArray[states_postion], states_postion + 1)
+            break
+        finalState = parent[finalState]
+
+
+
+
+
+
+
+
+
 def BFS(startState, finalState, WhichHeurestic):
 
     queu = PriorityQueue()
-    heuristic_value = CallWhichHeurastic(startState, finalState, WhichHeurestic)
+    heuristic_value = CallWhichHeuristic(startState, finalState, WhichHeurestic)
 
     queu.put((heuristic_value, startState))
     visited = []
     visited.append(startState)
     length_path = 0
 
+    parent = {}
+
     while(not queu.empty()):
 
         value_at_top = queu.get()
         length_path += 1
-        printState(value_at_top[1] , length_path)
+        # printState(value_at_top[1] , length_path)
 
         if(value_at_top[1] == finalState):
-            print(length_path)
+            FindPath(parent , finalState , startState)
             return True
 
-        next_Gen_neighbours = nextGenfunction(
-            value_at_top[1], finalState, WhichHeurestic)
+        next_Gen_neighbours = nextGenfunction(value_at_top[1], finalState, WhichHeurestic)
+
 
         for neighbours in next_Gen_neighbours:
             if neighbours[1] not in visited:
                 queu.put((neighbours[0], neighbours[1]))
                 visited.append(neighbours[1])
 
+                convertTupple = []
+                for states in neighbours[1]:
+                    convertTupple.append(tuple(states))
+
+                convertTupple = tuple(convertTupple)
+
+                sentParent = []
+                for states in value_at_top[1]:
+                    sentParent.append(tuple(states))
+
+                sentParent = tuple(sentParent)
+
+
+                parent[convertTupple] = sentParent
+
+
+
     return False
+
+
+
 
 
 def HillClimbing(startState , finalState, WhichHeurestic):
@@ -176,14 +263,16 @@ def HillClimbing(startState , finalState, WhichHeurestic):
     visited = []
     visited.append(startState)
     length_path = 0
+    initial_state = copy.deepcopy(startState)
+    parent = {}
 
     while(True):
 
         length_path += 1
-        printState(startState , length_path)
+        # printState(startState , length_path)
 
         if(startState == finalState):
-            print(length_path)
+            FindPath(parent , finalState , initial_state)
             return True
 
         next_Gen_neighbours = nextGenfunction(startState, finalState, WhichHeurestic)
@@ -194,12 +283,30 @@ def HillClimbing(startState , finalState, WhichHeurestic):
                 queu.put((neighbours[0], neighbours[1]))
 
         if(queu.empty()):
-            print(length_path)
+            print("There is no solution for HC approach with HeightHeuristic")
             return False
 
         next_move = queu.get()
+
+        convertTupple = []
+        for states in next_move[1]:
+            convertTupple.append(tuple(states))
+
+        convertTupple = tuple(convertTupple)
+
+        sentParent = []
+        for states in startState:
+            sentParent.append(tuple(states))
+
+        sentParent = tuple(sentParent)
+
+
+        parent[convertTupple] = sentParent
+
         startState = next_move[1]
         visited.append(next_move[1])
+
+
 
         
 
@@ -207,7 +314,7 @@ def HillClimbing(startState , finalState, WhichHeurestic):
 
 
 
-number_list = [1, 2, 3, 4, 5, 6]
+number_list = [1, 2, 3, 4, 5 ,6]
 startState = randomGenerate()
 print("random initial state")
 
@@ -223,6 +330,7 @@ for stack in finalState:
 print()
 
 # print(HightHeuristic(startState, finalState))
+# print(nextGenfunction(startState , finalState , 1))
 WhichHeurest = 2
 print("#######################################################################################################################################")
 print("For StateHeuristic Value is ")
