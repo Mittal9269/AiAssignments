@@ -44,8 +44,12 @@ count = 0
 for PerClause in Clause:
     string  = ""
     for element in PerClause:
-        string += str(element) + " "
+        if element < 0:
+            string += "~" +  chr(ord("A") + abs(element) - 1) + " "
+        else:
+            string +=  chr(ord("A") + abs(element) - 1) + " "
     string  = string[:len(string) - 1]
+    
     if (count == len(Clause) - 1):
         file.write(string)
     else:

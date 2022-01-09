@@ -6,10 +6,15 @@ import copy
 from generate import Clause
 from itertools import combinations
 
-def printState(current_state, length):
-    print("Current State " + str(length))
-    for state in current_state:
-        print(state)
+def printState(stringOfVar):
+    string = ""
+    for position in range(len(stringOfVar)):
+        if stringOfVar[position] == "0":
+            string += "~" +  chr(ord("A") + position) + " "
+        else:
+            string += chr(ord("A") + position) + " "
+
+    return string
 
 
 def rand_key(p):
@@ -51,36 +56,53 @@ def TebuSearch(StringOfVar):
     bestState = StringOfVar
     CandidateOfBestState = StringOfVar
     if(Heuristic(Clause, bestState) == (-1*k)):
-        print("First State itself is final state")
-        print(bestState)
+        print("First State itself is final state " + printState(bestState))
+        print("Total state explored 1")
+        return True
 
     tabuList = deque([])
     tabuList.append(bestState)
     limit = 2**(n)
 
-    limitChecker = 0
+    print("present State " + printState(CandidateOfBestState))
+
+    limitChecker = 1
     while (limitChecker < limit and Heuristic(Clause, bestState) != (-1*k)):
         limitChecker += 1
-        print("Visited state " + bestState)
-        sNeighborhood = nextGenfunction(CandidateOfBestState, 1)
-        CandidateOfBestState = sNeighborhood[0][1]
+        sNeighborhood = nextGenfunction(CandidateOfBestState, 2)
+        CandidateOfBestState = []
         for sCandidate in sNeighborhood:
-            if sCandidate[1] not in tabuList  and (sCandidate[0] < Heuristic(Clause, CandidateOfBestState)):
-                CandidateOfBestState = sCandidate[1]
+            if (sCandidate[1] not in tabuList):
+                if len(CandidateOfBestState) == 0:
+                    CandidateOfBestState = sCandidate[1]
+                else:
+                    if(sCandidate[0] < Heuristic(Clause, CandidateOfBestState)):
+                        CandidateOfBestState = sCandidate[1]
         
-        if (Heuristic(Clause, CandidateOfBestState) < Heuristic(Clause, bestState)):
+        if len(CandidateOfBestState) == 0:
+            print("No Futher Improvement possible stuck at local maxima " + printState(bestState))
+            print("total state explored " + str(limitChecker))
+            return False
+        print("present State " + printState(CandidateOfBestState))
+
+        if  (Heuristic(Clause, CandidateOfBestState) < Heuristic(Clause, bestState)):
             bestState = CandidateOfBestState
+
         tabuList.append(CandidateOfBestState)
         if (len(tabuList) > maxTabuSize):
             tabuList.popleft()
 
+
+
+
     if(limitChecker >= limit):
         print("Solution don't exist by limit")
-        print("best possible state " + str(bestState))
+        print("best possible state " + printState(bestState))
+        print("total state explored " + str(limitChecker))
         return False
-    print("Found the Solution ")
+    print("Found the Solution " + printState(bestState))
     print("number of interation " + str(limitChecker + 1))
-    return bestState
+    return True
 
 
 
@@ -94,16 +116,17 @@ def VarNeighbourDescent(stringOfVar):
     density = 1
     if(checkValue == (-1*k)):
         print("Success! Number of states explored are " + str(length_path + 1))
-        print(stringOfVar)
+        print("Final state " + printState(stringOfVar))
         return True
     while(checkValue != (-1*k) and density <= n):
-        length_path += 1
+        if (density == 1):
+            length_path += 1
         checkValue = Heuristic(Clause , stringOfVar)
         if(checkValue == (-1*k)):
-            print("Success! Number of states explored are " + str(length_path))
-            print("Final State " + stringOfVar)
+            print("Success! Number of states explored are " + str(length_path + 1))
+            print("Final State " + printState(stringOfVar))
             return True
-        print("Visited state " + stringOfVar)
+        print("Present state " + printState(stringOfVar) + " with density " + str(density))
 
         next_Gen_neighbours = nextGenfunction(stringOfVar, density)
         Indicator = False
@@ -116,8 +139,8 @@ def VarNeighbourDescent(stringOfVar):
                     stringOfVar = copy.deepcopy(neighbours[1])
 
         if(checkValue == (-1*k)):
-            print(stringOfVar)
-            print(length_path)
+            print("Final state " + printState(stringOfVar))
+            print("Total State explored " + str(length_path + 1))
             return True
 
         if(Indicator == False):
@@ -127,8 +150,8 @@ def VarNeighbourDescent(stringOfVar):
 
         if(density == n):
             print("Stuck at local maxima")
-            print("There is no solution for Hill Climbing approach with this Heuristic and number of states explored are " + str(length_path))
-            print("Stuck at" + stringOfVar)
+            print("There is no solution for VND approach and number of states explored are " + str(length_path))
+            print("Stuck at" + printState(stringOfVar))
             return False
 
     print("Nothing work check the function")
@@ -145,15 +168,15 @@ def BeamSearch(stringOfVar , beta):
     open.put((checkValue , stringOfVar))
 
     while(not open.empty()):
-        length_path += 1
         listOfCandidate = []
         while(not open.empty()):
+            length_path += 1
             topElement = open.get()
             if(topElement[0] == -1*k):
                 print("Success! Number of states explored are " + str(length_path))
-                print("Final state is " + topElement[1])
+                print("Final state is " + printState(topElement[1]))
                 return True
-            print("Visited state " + topElement[1])
+            print("Present state " + printState(topElement[1]))
 
             next_Gen_neighbours = nextGenfunction(topElement[1], 1)
             for neighbours in next_Gen_neighbours:
@@ -172,8 +195,8 @@ def BeamSearch(stringOfVar , beta):
 
 
         if(open.empty()):
-            print("Stuck at local maxima " + str(stringOfVar))
-            print("There is no solution for Hill Climbing approach with this Heuristic and number of states explored are " +str(length_path))
+            print("Stuck at local maxima " + printState(stringOfVar))
+            print("There is no solution for Beam search approach  and number of states explored are " +str(length_path))
             return False
 
 
@@ -185,14 +208,14 @@ print(Clause)
 k = len(Clause)
 n = int(sys.argv[1])
 string = rand_key(n)
-print("intial string " + string)
+print("intial string " + printState(string))
 print("\n" + "\n" + "\n")
 # print(Heuristic(Clause , string))
 print("Performance of Beam Search")
-print(BeamSearch(string , 4))
+print(BeamSearch(string , int(sys.argv[3])))
 print("#########################-----------------------#############---------------------------------------#################--------------")
 print("-------------------------#######################-------------#######################################-----------------##############")
-maxTabuSize = 5 
+maxTabuSize = int(sys.argv[4])
 print("\n" + "\n" + "\n")
 print("Performance of VND")
 print(VarNeighbourDescent(string))
