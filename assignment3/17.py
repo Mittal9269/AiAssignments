@@ -57,6 +57,7 @@ def TebuSearch(StringOfVar):
     CandidateOfBestState = StringOfVar
     if(Heuristic(Clause, bestState) == (-1*k)):
         print("First State itself is final state " + printState(bestState))
+        print("Total Nodes explored 1")
         print("Total state explored 1")
         return True
 
@@ -67,11 +68,13 @@ def TebuSearch(StringOfVar):
     print("present State " + printState(CandidateOfBestState))
 
     limitChecker = 1
+    totalStateVisited  = 1
     while (limitChecker < limit and Heuristic(Clause, bestState) != (-1*k)):
         limitChecker += 1
         sNeighborhood = nextGenfunction(CandidateOfBestState, 2)
         CandidateOfBestState = []
         for sCandidate in sNeighborhood:
+            totalStateVisited += 1 
             if (sCandidate[1] not in tabuList):
                 if len(CandidateOfBestState) == 0:
                     CandidateOfBestState = sCandidate[1]
@@ -81,7 +84,8 @@ def TebuSearch(StringOfVar):
         
         if len(CandidateOfBestState) == 0:
             print("No Futher Improvement possible stuck at local maxima " + printState(bestState))
-            print("total state explored " + str(limitChecker))
+            print("total Node explored " + str(limitChecker))
+            print("total state explored " + str(totalStateVisited))
             return False
         print("present State " + printState(CandidateOfBestState))
 
@@ -98,10 +102,12 @@ def TebuSearch(StringOfVar):
     if(limitChecker >= limit):
         print("Solution don't exist by limit")
         print("best possible state " + printState(bestState))
-        print("total state explored " + str(limitChecker))
+        print("total Nodes explored " + str(limitChecker))
+        print("total state explored " + str(totalStateVisited))
         return False
     print("Found the Solution " + printState(bestState))
     print("number of interation " + str(limitChecker + 1))
+    print("number of States " + str(totalStateVisited + 1))
     return True
 
 
@@ -114,8 +120,10 @@ def VarNeighbourDescent(stringOfVar):
     checkValue = Heuristic(Clause , stringOfVar)
 
     density = 1
+    totalStateVisited = 0
     if(checkValue == (-1*k)):
-        print("Success! Number of states explored are " + str(length_path + 1))
+        print("Success! Number of Nodes explored are " + str(length_path + 1))
+        print("Success! Number of states explored are " + str(totalStateVisited + 1))
         print("Final state " + printState(stringOfVar))
         return True
     while(checkValue != (-1*k) and density <= n):
@@ -123,7 +131,8 @@ def VarNeighbourDescent(stringOfVar):
             length_path += 1
         checkValue = Heuristic(Clause , stringOfVar)
         if(checkValue == (-1*k)):
-            print("Success! Number of states explored are " + str(length_path + 1))
+            print("Success! Number of Nodes explored are " + str(length_path + 1))
+            print("Number of Nodes explored are " + str(totalStateVisited + 1))
             print("Final State " + printState(stringOfVar))
             return True
         print("Present state " + printState(stringOfVar) + " with density " + str(density))
@@ -131,6 +140,7 @@ def VarNeighbourDescent(stringOfVar):
         next_Gen_neighbours = nextGenfunction(stringOfVar, density)
         Indicator = False
         for neighbours in next_Gen_neighbours:
+            totalStateVisited += 1
             if neighbours[1] not in visited:
                 visited.append(neighbours[1])
                 if neighbours[0] <= checkValue:
@@ -140,7 +150,8 @@ def VarNeighbourDescent(stringOfVar):
 
         if(checkValue == (-1*k)):
             print("Final state " + printState(stringOfVar))
-            print("Total State explored " + str(length_path + 1))
+            print("Total Nodes explored " + str(length_path + 1))
+            print("Total State explored " + str(totalStateVisited + 1))
             return True
 
         if(Indicator == False):
@@ -150,7 +161,8 @@ def VarNeighbourDescent(stringOfVar):
 
         if(density == n):
             print("Stuck at local maxima")
-            print("There is no solution for VND approach and number of states explored are " + str(length_path))
+            print("There is no solution for VND approach and number of Nodes explored are " + str(length_path))
+            print("There is no solution for VND approach and number of states explored are " + str(totalStateVisited))
             print("Stuck at" + printState(stringOfVar))
             return False
 
@@ -166,6 +178,7 @@ def BeamSearch(stringOfVar , beta):
     checkValue = Heuristic(Clause, stringOfVar)
     open =  PriorityQueue()
     open.put((checkValue , stringOfVar))
+    totalStateVisited = 1
 
     while(not open.empty()):
         listOfCandidate = []
@@ -173,13 +186,15 @@ def BeamSearch(stringOfVar , beta):
             length_path += 1
             topElement = open.get()
             if(topElement[0] == -1*k):
-                print("Success! Number of states explored are " + str(length_path))
+                print("Success! Number of Nodes explored are " + str(length_path))
+                print("Success! Number of states explored are " + str(totalStateVisited))
                 print("Final state is " + printState(topElement[1]))
                 return True
             print("Present state " + printState(topElement[1]))
 
             next_Gen_neighbours = nextGenfunction(topElement[1], 1)
             for neighbours in next_Gen_neighbours:
+                totalStateVisited += 1 
                 if neighbours[1] not in visited:
                     visited.append(neighbours[1])
                     if neighbours[0] <= topElement[0]:
@@ -196,7 +211,8 @@ def BeamSearch(stringOfVar , beta):
 
         if(open.empty()):
             print("Stuck at local maxima " + printState(stringOfVar))
-            print("There is no solution for Beam search approach  and number of states explored are " +str(length_path))
+            print("There is no solution for Beam search approach  and number of Nodes explored are " +str(length_path))
+            print("There is no solution for Beam search approach  and number of states explored are " +str(totalStateVisited))
             return False
 
 
