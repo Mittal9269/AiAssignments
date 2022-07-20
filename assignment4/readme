@@ -1,0 +1,15 @@
+To run our program, ensure that you have g++ compiler of version greater than 11
+
+If your default g++ compiler is of version greater than equal to 11. Then change the command in makefile to g++ from g++-11
+
+Now, to start running our program, first run:
+make build
+
+This will generate the genetic executable file.
+
+After this, run the command
+./runme.sh <filename>
+
+where filename is the name of the input file
+
+The output would be stored in the output.txt file.
