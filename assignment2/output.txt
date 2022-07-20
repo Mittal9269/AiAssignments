@@ -1,0 +1,3264 @@
+Random Initial state
+[1, 4, 5]
+[6, 2]
+[3]
+()
+Random Final state
+[3, 5, 4]
+[1, 2]
+[6]
+()
+#######################################################################################################################################
+For BFS in StateHeuristic, States are
+Current State 1
+[1, 4, 5]
+[6, 2]
+[3]
+Current State 2
+[1, 4]
+[6, 2]
+[3, 5]
+Current State 3
+[1]
+[6, 2]
+[3, 5, 4]
+Current State 4
+[]
+[6, 2]
+[3, 5, 4, 1]
+Current State 5
+[]
+[6, 2, 1]
+[3, 5, 4]
+Current State 6
+[]
+[6, 2, 1, 4]
+[3, 5]
+Current State 7
+[]
+[6, 2, 1, 4, 5]
+[3]
+Current State 8
+[3]
+[6, 2, 1, 4, 5]
+[]
+Current State 9
+[3, 5]
+[6, 2, 1, 4]
+[]
+Current State 10
+[3, 5, 4]
+[6, 2, 1]
+[]
+Current State 11
+[3, 5, 4]
+[6, 2]
+[1]
+Current State 12
+[3, 5, 4, 1]
+[6, 2]
+[]
+Current State 13
+[3, 5]
+[6, 2]
+[1, 4]
+Current State 14
+[3, 5]
+[6, 2, 1]
+[4]
+Current State 15
+[3, 5]
+[6, 2]
+[4, 1]
+Current State 16
+[3, 5]
+[6, 2, 4]
+[1]
+Current State 17
+[3, 5]
+[6, 2, 4, 1]
+[]
+Current State 18
+[3, 5, 1]
+[6, 2]
+[4]
+Current State 19
+[3, 5, 1]
+[6, 2, 4]
+[]
+Current State 20
+[3, 5, 1, 4]
+[6, 2]
+[]
+Current State 21
+[3, 5, 4]
+[6]
+[1, 2]
+Current State 22
+[3, 5, 4]
+[]
+[1, 2, 6]
+Current State 23
+[3, 5, 4, 1]
+[6]
+[2]
+Current State 24
+[3, 5, 4]
+[6]
+[2, 1]
+Current State 25
+[3, 5, 4]
+[]
+[2, 1, 6]
+Current State 26
+[3, 5, 4]
+[6, 1]
+[2]
+Current State 27
+[3, 5, 4]
+[6, 1, 2]
+[]
+Current State 28
+[3, 5, 4, 1]
+[]
+[2, 6]
+Current State 29
+[3, 5, 4]
+[1]
+[2, 6]
+Current State 30
+[3, 5, 4]
+[1, 6]
+[2]
+Current State 31
+[3, 5, 4]
+[1, 6, 2]
+[]
+Current State 32
+[3, 5, 4, 2]
+[1, 6]
+[]
+Current State 33
+[3, 5, 4, 2]
+[1]
+[6]
+Current State 34
+[3, 5, 4]
+[1, 2]
+[6]
+Success! Number of states explored are 34
+#######################################################################################################################################
+For BFS in HeightHeuristic, States are
+Current State 1
+[1, 4, 5]
+[6, 2]
+[3]
+Current State 2
+[1, 4]
+[6, 2]
+[3, 5]
+Current State 3
+[1]
+[6, 2]
+[3, 5, 4]
+Current State 4
+[1]
+[6, 2, 4]
+[3, 5]
+Current State 5
+[1, 5]
+[6, 2, 4]
+[3]
+Current State 6
+[1, 5, 4]
+[6, 2]
+[3]
+Current State 7
+[1, 5, 4]
+[6, 2, 3]
+[]
+Current State 8
+[1, 5, 4, 3]
+[6, 2]
+[]
+Current State 9
+[1, 5, 4]
+[6]
+[3, 2]
+Current State 10
+[1, 5]
+[6, 2]
+[3, 4]
+Current State 11
+[1, 5]
+[6, 2, 3]
+[4]
+Current State 12
+[1, 5]
+[6, 2]
+[4, 3]
+Current State 13
+[1, 5, 3]
+[6, 2]
+[4]
+Current State 14
+[1, 5, 4]
+[]
+[3, 2, 6]
+Current State 15
+[1, 5, 4, 2]
+[6]
+[3]
+Current State 16
+[1, 5, 4, 3]
+[6]
+[2]
+Current State 17
+[1, 5, 4]
+[6]
+[2, 3]
+Current State 18
+[1, 5, 4]
+[6, 3]
+[2]
+Current State 19
+[1, 5, 4]
+[]
+[2, 3, 6]
+Current State 20
+[1, 5, 4]
+[6, 3, 2]
+[]
+Current State 21
+[1, 5, 4, 2]
+[]
+[3, 6]
+Current State 22
+[1, 5, 4]
+[2]
+[3, 6]
+Current State 23
+[1, 5, 4]
+[2, 6]
+[3]
+Current State 24
+[1, 5, 4]
+[]
+[3, 6, 2]
+Current State 25
+[1, 5, 4]
+[2, 6, 3]
+[]
+Current State 26
+[1, 5, 4, 6]
+[2]
+[3]
+Current State 27
+[1, 5, 4, 2]
+[6, 3]
+[]
+Current State 28
+[1, 5, 4, 3]
+[]
+[2, 6]
+Current State 29
+[1, 5, 4]
+[3]
+[2, 6]
+Current State 30
+[1, 5, 4]
+[3, 6]
+[2]
+Current State 31
+[1, 5, 4]
+[]
+[2, 6, 3]
+Current State 32
+[1, 5, 4]
+[3, 6, 2]
+[]
+Current State 33
+[1, 5, 4, 6]
+[3]
+[2]
+Current State 34
+[1, 5, 4, 6]
+[3, 2]
+[]
+Current State 35
+[1, 5, 4]
+[3, 2]
+[6]
+Current State 36
+[1, 5, 4]
+[3]
+[6, 2]
+Current State 37
+[1, 5, 4]
+[3, 2, 6]
+[]
+Current State 38
+[1, 5]
+[3, 2]
+[6, 4]
+Current State 39
+[1, 5]
+[3, 2, 4]
+[6]
+Current State 40
+[1, 5, 4]
+[]
+[6, 2, 3]
+Current State 41
+[1, 5, 4, 2]
+[3]
+[6]
+Current State 42
+[1, 5, 4, 2]
+[]
+[6, 3]
+Current State 43
+[1, 5, 4]
+[2]
+[6, 3]
+Current State 44
+[1, 5, 4]
+[2, 3]
+[6]
+Current State 45
+[1, 5, 4]
+[]
+[6, 3, 2]
+Current State 46
+[1, 5, 4, 3]
+[2]
+[6]
+Current State 47
+[1, 5, 4, 3]
+[]
+[6, 2]
+Current State 48
+[1, 5]
+[3, 2, 6]
+[4]
+Current State 49
+[1, 5]
+[3, 2]
+[4, 6]
+Current State 50
+[1, 5, 4]
+[2, 3, 6]
+[]
+Current State 51
+[1, 5, 6]
+[3, 2]
+[4]
+Current State 52
+[1, 5]
+[2, 3]
+[6, 4]
+Current State 53
+[1, 5]
+[2, 4]
+[6, 3]
+Current State 54
+[1, 5]
+[3, 4]
+[6, 2]
+Current State 55
+[1, 5, 4, 2]
+[3, 6]
+[]
+Current State 56
+[1, 5, 4, 3]
+[2, 6]
+[]
+Current State 57
+[1, 5, 4, 6]
+[]
+[2, 3]
+Current State 58
+[1, 5, 4, 6]
+[]
+[3, 2]
+Current State 59
+[1, 5, 4, 6]
+[2, 3]
+[]
+Current State 60
+[1]
+[3, 2]
+[6, 4, 5]
+Current State 61
+[1]
+[3, 2, 4]
+[6, 5]
+Current State 62
+[1, 4]
+[3, 2]
+[6, 5]
+Current State 63
+[1]
+[3, 2]
+[6, 5, 4]
+Current State 64
+[1]
+[3, 2, 5]
+[6, 4]
+Current State 65
+[1, 4]
+[3, 2, 5]
+[6]
+Current State 66
+[1, 4, 5]
+[3, 2]
+[6]
+Current State 67
+[1, 5]
+[2]
+[6, 3, 4]
+Current State 68
+[1, 5]
+[2]
+[6, 4, 3]
+Current State 69
+[1, 5]
+[2, 3, 4]
+[6]
+Current State 70
+[1, 5]
+[2, 4, 3]
+[6]
+Current State 71
+[1, 5]
+[3]
+[6, 2, 4]
+Current State 72
+[1, 5]
+[3]
+[6, 4, 2]
+Current State 73
+[1, 5]
+[3, 4, 2]
+[6]
+Current State 74
+[1, 5]
+[4]
+[6, 2, 3]
+Current State 75
+[1, 5]
+[4, 3]
+[6, 2]
+Current State 76
+[1, 5]
+[4]
+[6, 3, 2]
+Current State 77
+[1, 5]
+[4, 2]
+[6, 3]
+Current State 78
+[1, 5]
+[4, 2, 3]
+[6]
+Current State 79
+[1, 5, 3]
+[4, 2]
+[6]
+Current State 80
+[1]
+[4, 2]
+[6, 3, 5]
+Current State 81
+[1]
+[4, 2, 3]
+[6, 5]
+Current State 82
+[1, 3]
+[4, 2]
+[6, 5]
+Current State 83
+[1]
+[4, 2]
+[6, 5, 3]
+Current State 84
+[1]
+[4, 2, 5]
+[6, 3]
+Current State 85
+[1, 3]
+[4, 2, 5]
+[6]
+Current State 86
+[1, 3, 5]
+[4, 2]
+[6]
+Current State 87
+[1, 5]
+[4, 3, 2]
+[6]
+Current State 88
+[1, 5, 2]
+[3]
+[6, 4]
+Current State 89
+[1, 5, 2]
+[3, 4]
+[6]
+Current State 90
+[1, 5, 2]
+[4]
+[6, 3]
+Current State 91
+[1, 5, 2]
+[4, 3]
+[6]
+Current State 92
+[1, 5, 3]
+[2]
+[6, 4]
+Current State 93
+[1, 5, 3]
+[2, 4]
+[6]
+Current State 94
+[1, 5, 3]
+[4]
+[6, 2]
+Current State 95
+[1, 5, 3]
+[4, 2, 6]
+[]
+Current State 96
+[1, 5]
+[4, 2, 6]
+[3]
+Current State 97
+[1, 5]
+[4, 2]
+[3, 6]
+Current State 98
+[1, 5, 6]
+[4, 2]
+[3]
+Current State 99
+[1, 5, 3]
+[6, 2, 4]
+[]
+Current State 100
+[1, 5, 4, 2, 3]
+[]
+[6]
+Current State 101
+[1, 5, 4, 3, 2]
+[]
+[6]
+Current State 102
+[1, 5, 6]
+[3, 2, 4]
+[]
+Current State 103
+[1, 5, 6]
+[4, 2, 3]
+[]
+Current State 104
+[1, 5]
+[2, 4]
+[3, 6]
+Current State 105
+[1, 5]
+[2, 6]
+[3, 4]
+Current State 106
+[1, 5]
+[3, 2, 4, 6]
+[]
+Current State 107
+[1, 5]
+[3, 2, 6, 4]
+[]
+Current State 108
+[1, 5]
+[3, 4]
+[2, 6]
+Current State 109
+[1, 5]
+[3, 6]
+[2, 4]
+Current State 110
+[1, 5]
+[4, 2, 3, 6]
+[]
+Current State 111
+[1, 5]
+[4, 2, 6, 3]
+[]
+Current State 112
+[1, 5]
+[6, 2, 3, 4]
+[]
+Current State 113
+[1, 5]
+[6, 2, 4, 3]
+[]
+Current State 114
+[1, 5]
+[6, 3]
+[2, 4]
+Current State 115
+[1, 5]
+[6, 4]
+[2, 3]
+Current State 116
+[1, 5]
+[6, 4]
+[3, 2]
+Current State 117
+[1, 5, 3, 4]
+[6, 2]
+[]
+Current State 118
+[1, 5, 3, 6]
+[4, 2]
+[]
+Current State 119
+[1, 5, 6, 3]
+[4, 2]
+[]
+Current State 120
+[1, 5, 6, 4]
+[3, 2]
+[]
+Current State 121
+[]
+[3, 2, 1]
+[6, 4, 5]
+Current State 122
+[5]
+[3, 2, 1]
+[6, 4]
+Current State 123
+[5, 1]
+[3, 2]
+[6, 4]
+Current State 124
+[5, 1, 4]
+[3, 2]
+[6]
+Current State 125
+[5, 1, 4]
+[3]
+[6, 2]
+Current State 126
+[5, 1, 4]
+[3, 2, 6]
+[]
+Current State 127
+[5, 1, 4, 6]
+[3, 2]
+[]
+Current State 128
+[5]
+[3, 2]
+[6, 4, 1]
+Current State 129
+[5, 1]
+[3, 2, 4]
+[6]
+Current State 130
+[5]
+[3, 2, 4]
+[6, 1]
+Current State 131
+[5, 4]
+[3, 2]
+[6, 1]
+Current State 132
+[5]
+[3, 2]
+[6, 1, 4]
+Current State 133
+[5, 1, 4]
+[]
+[6, 2, 3]
+Current State 134
+[5, 1, 4, 2]
+[3]
+[6]
+Current State 135
+[5, 4]
+[3, 2, 1]
+[6]
+Current State 136
+[5, 4, 1]
+[3, 2]
+[6]
+Current State 137
+[5, 1, 4, 2]
+[]
+[6, 3]
+Current State 138
+[5, 1, 4]
+[2]
+[6, 3]
+Current State 139
+[5, 1, 4]
+[2, 3]
+[6]
+Current State 140
+[5, 1, 4]
+[]
+[6, 3, 2]
+Current State 141
+[5, 1, 4, 3]
+[2]
+[6]
+Current State 142
+[5, 1, 4, 3]
+[]
+[6, 2]
+Current State 143
+[]
+[3, 2, 1]
+[6, 5, 4]
+Current State 144
+[4]
+[3, 2, 1]
+[6, 5]
+Current State 145
+[4, 5]
+[3, 2, 1]
+[6]
+Current State 146
+[4, 5]
+[3, 2]
+[6, 1]
+Current State 147
+[4, 5, 1]
+[3, 2]
+[6]
+Current State 148
+[4, 1]
+[3, 2]
+[6, 5]
+Current State 149
+[4]
+[3, 2]
+[6, 1, 5]
+Current State 150
+[4]
+[3, 2]
+[6, 5, 1]
+Current State 151
+[4]
+[3, 2, 5]
+[6, 1]
+Current State 152
+[4, 1]
+[3, 2, 5]
+[6]
+Current State 153
+[4, 1, 5]
+[3, 2]
+[6]
+Current State 154
+[4, 5]
+[3]
+[6, 1, 2]
+Current State 155
+[4, 5, 1]
+[3]
+[6, 2]
+Current State 156
+[4, 5]
+[3, 1]
+[6, 2]
+Current State 157
+[4, 5]
+[3]
+[6, 2, 1]
+Current State 158
+[4, 5]
+[3, 1, 2]
+[6]
+Current State 159
+[4, 5, 1]
+[3, 2, 6]
+[]
+Current State 160
+[4, 5]
+[3, 2, 6]
+[1]
+Current State 161
+[4, 5]
+[3, 2]
+[1, 6]
+Current State 162
+[4, 5, 6]
+[3, 2]
+[1]
+Current State 163
+[4, 5, 2]
+[3]
+[6, 1]
+Current State 164
+[4, 5, 2]
+[3, 1]
+[6]
+Current State 165
+[4, 5, 6]
+[3, 2, 1]
+[]
+Current State 166
+[4, 5]
+[3, 2, 1, 6]
+[]
+Current State 167
+[4, 5]
+[3, 2, 6, 1]
+[]
+Current State 168
+[4, 5, 1, 6]
+[3, 2]
+[]
+Current State 169
+[4, 5, 6, 1]
+[3, 2]
+[]
+Current State 170
+[]
+[3, 2, 4]
+[6, 1, 5]
+Current State 171
+[]
+[3, 2, 4]
+[6, 5, 1]
+Current State 172
+[]
+[3, 2, 5]
+[6, 1, 4]
+Current State 173
+[]
+[3, 2, 5]
+[6, 4, 1]
+Current State 174
+[]
+[4, 2, 1]
+[6, 3, 5]
+Current State 175
+[5]
+[4, 2, 1]
+[6, 3]
+Current State 176
+[5, 1]
+[4, 2]
+[6, 3]
+Current State 177
+[5]
+[4, 2]
+[6, 3, 1]
+Current State 178
+[5, 1]
+[4, 2, 3]
+[6]
+Current State 179
+[5]
+[4, 2, 3]
+[6, 1]
+Current State 180
+[5, 3]
+[4, 2]
+[6, 1]
+Current State 181
+[5]
+[4, 2]
+[6, 1, 3]
+Current State 182
+[5, 1, 3]
+[4, 2]
+[6]
+Current State 183
+[5, 3]
+[4, 2, 1]
+[6]
+Current State 184
+[5, 3, 1]
+[4, 2]
+[6]
+Current State 185
+[]
+[4, 2, 1]
+[6, 5, 3]
+Current State 186
+[3]
+[4, 2, 1]
+[6, 5]
+Current State 187
+[3, 5]
+[4, 2, 1]
+[6]
+Current State 188
+[3, 5]
+[4, 2]
+[6, 1]
+Current State 189
+[3, 5, 1]
+[4, 2]
+[6]
+Current State 190
+[3, 1]
+[4, 2]
+[6, 5]
+Current State 191
+[3]
+[4, 2]
+[6, 1, 5]
+Current State 192
+[3]
+[4, 2]
+[6, 5, 1]
+Current State 193
+[3]
+[4, 2, 5]
+[6, 1]
+Current State 194
+[3, 1]
+[4, 2, 5]
+[6]
+Current State 195
+[3, 1, 5]
+[4, 2]
+[6]
+Current State 196
+[3, 5]
+[4]
+[6, 1, 2]
+Current State 197
+[3, 5, 4]
+[]
+[6, 1, 2]
+Current State 198
+[3, 5, 4]
+[2]
+[6, 1]
+Current State 199
+[3, 5, 4]
+[2, 1]
+[6]
+Current State 200
+[3, 5, 4, 1]
+[2]
+[6]
+Current State 201
+[3, 5, 4, 1]
+[]
+[6, 2]
+Current State 202
+[3, 5, 4]
+[1]
+[6, 2]
+Current State 203
+[3, 5, 4]
+[1, 2]
+[6]
+Success! Number of states explored are 203
+#######################################################################################################################################
+For BFS in HeightSquareHeuristic, States are
+Current State 1
+[1, 4, 5]
+[6, 2]
+[3]
+Current State 2
+[1, 4]
+[6, 2]
+[3, 5]
+Current State 3
+[1]
+[6, 2]
+[3, 5, 4]
+Current State 4
+[1]
+[6, 2, 4]
+[3, 5]
+Current State 5
+[1, 5]
+[6, 2, 4]
+[3]
+Current State 6
+[1, 5, 4]
+[6, 2]
+[3]
+Current State 7
+[1, 5, 4]
+[6]
+[3, 2]
+Current State 8
+[1, 5, 4]
+[6, 2, 3]
+[]
+Current State 9
+[1, 5]
+[6, 2]
+[3, 4]
+Current State 10
+[1, 5, 4, 3]
+[6, 2]
+[]
+Current State 11
+[1, 5, 4]
+[]
+[3, 2, 6]
+Current State 12
+[1, 5]
+[6, 2, 3]
+[4]
+Current State 13
+[1, 5]
+[6, 2]
+[4, 3]
+Current State 14
+[1, 5, 3]
+[6, 2]
+[4]
+Current State 15
+[1, 5, 4, 2]
+[6]
+[3]
+Current State 16
+[1, 5, 4, 3]
+[6]
+[2]
+Current State 17
+[1, 5, 4]
+[6]
+[2, 3]
+Current State 18
+[1, 5, 4]
+[6, 3]
+[2]
+Current State 19
+[1, 5, 4]
+[]
+[2, 3, 6]
+Current State 20
+[1, 5, 4]
+[6, 3, 2]
+[]
+Current State 21
+[1, 5]
+[6, 3]
+[2, 4]
+Current State 22
+[1, 5]
+[6, 4]
+[2, 3]
+Current State 23
+[1, 5]
+[6, 4]
+[3, 2]
+Current State 24
+[1, 5, 4, 2]
+[]
+[3, 6]
+Current State 25
+[1, 5, 4]
+[2]
+[3, 6]
+Current State 26
+[1, 5, 4]
+[2, 6]
+[3]
+Current State 27
+[1, 5, 4]
+[]
+[3, 6, 2]
+Current State 28
+[1, 5, 4]
+[2, 6, 3]
+[]
+Current State 29
+[1, 5, 4, 6]
+[2]
+[3]
+Current State 30
+[1, 5]
+[2, 4]
+[3, 6]
+Current State 31
+[1, 5]
+[2, 6]
+[3, 4]
+Current State 32
+[1, 5, 4, 2]
+[6, 3]
+[]
+Current State 33
+[1, 5, 4, 3]
+[]
+[2, 6]
+Current State 34
+[1, 5, 4]
+[3]
+[2, 6]
+Current State 35
+[1, 5, 4]
+[3, 6]
+[2]
+Current State 36
+[1, 5, 4]
+[]
+[2, 6, 3]
+Current State 37
+[1, 5, 4]
+[3, 6, 2]
+[]
+Current State 38
+[1, 5, 4, 6]
+[3]
+[2]
+Current State 39
+[1, 5, 4, 6]
+[3, 2]
+[]
+Current State 40
+[1, 5, 4]
+[3, 2]
+[6]
+Current State 41
+[1, 5, 4]
+[3]
+[6, 2]
+Current State 42
+[1, 5, 4]
+[3, 2, 6]
+[]
+Current State 43
+[1, 5]
+[3, 2]
+[6, 4]
+Current State 44
+[1, 5, 4]
+[]
+[6, 2, 3]
+Current State 45
+[1, 5]
+[3, 2, 4]
+[6]
+Current State 46
+[1, 5]
+[3, 2, 6]
+[4]
+Current State 47
+[1, 5]
+[3, 2]
+[4, 6]
+Current State 48
+[1, 5, 4, 2]
+[3]
+[6]
+Current State 49
+[1, 5, 6]
+[3, 2]
+[4]
+Current State 50
+[1, 5]
+[3, 4]
+[6, 2]
+Current State 51
+[1, 5]
+[3, 4]
+[2, 6]
+Current State 52
+[1, 5]
+[3, 6]
+[2, 4]
+Current State 53
+[1, 5, 4, 2]
+[]
+[6, 3]
+Current State 54
+[1, 5, 4]
+[2]
+[6, 3]
+Current State 55
+[1, 5, 4]
+[2, 3]
+[6]
+Current State 56
+[1, 5, 4]
+[]
+[6, 3, 2]
+Current State 57
+[1, 5, 4]
+[2, 3, 6]
+[]
+Current State 58
+[1, 5, 4, 3]
+[2]
+[6]
+Current State 59
+[1, 5]
+[2, 3]
+[6, 4]
+Current State 60
+[1, 5]
+[2, 4]
+[6, 3]
+Current State 61
+[1, 5, 4, 3]
+[]
+[6, 2]
+Current State 62
+[1, 5, 4, 2]
+[3, 6]
+[]
+Current State 63
+[1, 5, 4, 3]
+[2, 6]
+[]
+Current State 64
+[1, 5, 4, 6]
+[]
+[2, 3]
+Current State 65
+[1, 5, 4, 6]
+[]
+[3, 2]
+Current State 66
+[1, 5, 4, 6]
+[2, 3]
+[]
+Current State 67
+[1]
+[3, 2]
+[6, 4, 5]
+Current State 68
+[1]
+[3, 2, 4]
+[6, 5]
+Current State 69
+[1, 4]
+[3, 2]
+[6, 5]
+Current State 70
+[1]
+[3, 2]
+[6, 5, 4]
+Current State 71
+[1]
+[3, 2, 5]
+[6, 4]
+Current State 72
+[1, 4]
+[3, 2, 5]
+[6]
+Current State 73
+[1, 4, 5]
+[3, 2]
+[6]
+Current State 74
+[1, 5]
+[2]
+[6, 3, 4]
+Current State 75
+[1, 5]
+[2]
+[6, 4, 3]
+Current State 76
+[1, 5]
+[2, 3, 4]
+[6]
+Current State 77
+[1, 5]
+[2, 4, 3]
+[6]
+Current State 78
+[1, 5]
+[3]
+[6, 2, 4]
+Current State 79
+[1, 5]
+[3]
+[6, 4, 2]
+Current State 80
+[1, 5]
+[3, 4, 2]
+[6]
+Current State 81
+[1, 5]
+[4]
+[6, 2, 3]
+Current State 82
+[1, 5]
+[4, 3]
+[6, 2]
+Current State 83
+[1, 5]
+[4]
+[6, 3, 2]
+Current State 84
+[1, 5]
+[4, 2]
+[6, 3]
+Current State 85
+[1, 5]
+[4, 2, 3]
+[6]
+Current State 86
+[1, 5, 3]
+[4, 2]
+[6]
+Current State 87
+[1]
+[4, 2]
+[6, 3, 5]
+Current State 88
+[1]
+[4, 2, 3]
+[6, 5]
+Current State 89
+[1, 3]
+[4, 2]
+[6, 5]
+Current State 90
+[1]
+[4, 2]
+[6, 5, 3]
+Current State 91
+[1]
+[4, 2, 5]
+[6, 3]
+Current State 92
+[1, 3]
+[4, 2, 5]
+[6]
+Current State 93
+[1, 3, 5]
+[4, 2]
+[6]
+Current State 94
+[1, 5]
+[4, 3, 2]
+[6]
+Current State 95
+[1, 5, 2]
+[3]
+[6, 4]
+Current State 96
+[1, 5, 2]
+[3, 4]
+[6]
+Current State 97
+[1, 5, 2]
+[4]
+[6, 3]
+Current State 98
+[1, 5, 2]
+[4, 3]
+[6]
+Current State 99
+[1, 5, 3]
+[2]
+[6, 4]
+Current State 100
+[1, 5, 3]
+[2, 4]
+[6]
+Current State 101
+[1, 5, 3]
+[4]
+[6, 2]
+Current State 102
+[1]
+[3, 2]
+[4, 6, 5]
+Current State 103
+[1]
+[3, 2, 5]
+[4, 6]
+Current State 104
+[1]
+[3, 2, 6]
+[4, 5]
+Current State 105
+[1, 6]
+[3, 2]
+[4, 5]
+Current State 106
+[1]
+[3, 2]
+[4, 5, 6]
+Current State 107
+[1]
+[6, 2]
+[3, 4, 5]
+Current State 108
+[1]
+[6, 2]
+[4, 3, 5]
+Current State 109
+[1]
+[6, 2, 3]
+[4, 5]
+Current State 110
+[1, 3]
+[6, 2]
+[4, 5]
+Current State 111
+[1]
+[6, 2]
+[4, 5, 3]
+Current State 112
+[1]
+[6, 2, 5]
+[3, 4]
+Current State 113
+[1]
+[6, 2, 5]
+[4, 3]
+Current State 114
+[1, 3]
+[6, 2, 5]
+[4]
+Current State 115
+[1, 3, 4]
+[6, 2, 5]
+[]
+Current State 116
+[1, 3, 4]
+[6, 2]
+[5]
+Current State 117
+[1, 3, 4]
+[6]
+[5, 2]
+Current State 118
+[1, 3]
+[6, 2]
+[5, 4]
+Current State 119
+[1, 3, 4, 5]
+[6, 2]
+[]
+Current State 120
+[1, 3, 4]
+[]
+[5, 2, 6]
+Current State 121
+[1]
+[6, 2]
+[5, 4, 3]
+Current State 122
+[1]
+[6, 2, 3]
+[5, 4]
+Current State 123
+[1, 3]
+[6, 2, 4]
+[5]
+Current State 124
+[1]
+[6, 2, 4]
+[5, 3]
+Current State 125
+[1, 4]
+[6, 2]
+[5, 3]
+Current State 126
+[1]
+[6, 2]
+[5, 3, 4]
+Current State 127
+[1, 3, 5]
+[6, 2]
+[4]
+Current State 128
+[1, 4]
+[6, 2, 3]
+[5]
+Current State 129
+[1, 4]
+[6, 2, 5]
+[3]
+Current State 130
+[1, 4, 3]
+[6, 2]
+[5]
+Current State 131
+[1, 5]
+[2]
+[3, 4, 6]
+Current State 132
+[1, 5]
+[2]
+[3, 6, 4]
+Current State 133
+[1, 5]
+[2, 3, 6]
+[4]
+Current State 134
+[1, 5]
+[2, 3]
+[4, 6]
+Current State 135
+[1, 5]
+[2]
+[4, 6, 3]
+Current State 136
+[1, 5]
+[2, 4, 6]
+[3]
+Current State 137
+[1, 5]
+[2, 6, 3]
+[4]
+Current State 138
+[1, 5]
+[2, 6]
+[4, 3]
+Current State 139
+[1, 5]
+[2]
+[4, 3, 6]
+Current State 140
+[1, 5]
+[2, 6, 4]
+[3]
+Current State 141
+[1, 5]
+[3]
+[2, 4, 6]
+Current State 142
+[1, 5]
+[3]
+[2, 6, 4]
+Current State 143
+[1, 5]
+[3]
+[4, 6, 2]
+Current State 144
+[1, 5]
+[3, 4, 6]
+[2]
+Current State 145
+[1, 5]
+[3, 6, 2]
+[4]
+Current State 146
+[1, 5]
+[3, 6]
+[4, 2]
+Current State 147
+[1, 5]
+[3]
+[4, 2, 6]
+Current State 148
+[1, 5]
+[3, 6, 4]
+[2]
+Current State 149
+[1, 5]
+[4]
+[2, 3, 6]
+Current State 150
+[1, 5]
+[4, 6]
+[2, 3]
+Current State 151
+[1, 5]
+[4]
+[2, 6, 3]
+Current State 152
+[1, 5]
+[4, 3]
+[2, 6]
+Current State 153
+[1, 5]
+[4]
+[3, 2, 6]
+Current State 154
+[1, 5]
+[4, 6]
+[3, 2]
+Current State 155
+[1, 5]
+[4]
+[3, 6, 2]
+Current State 156
+[1, 5]
+[4, 2]
+[3, 6]
+Current State 157
+[1, 5]
+[4, 2, 6]
+[3]
+Current State 158
+[1, 5, 6]
+[4, 2]
+[3]
+Current State 159
+[1]
+[4, 2]
+[3, 6, 5]
+Current State 160
+[1]
+[4, 2, 5]
+[3, 6]
+Current State 161
+[1]
+[4, 2, 6]
+[3, 5]
+Current State 162
+[1, 6]
+[4, 2]
+[3, 5]
+Current State 163
+[1]
+[4, 2]
+[3, 5, 6]
+Current State 164
+[1, 5]
+[4, 3, 6]
+[2]
+Current State 165
+[1, 5]
+[4, 6, 2]
+[3]
+Current State 166
+[1, 5]
+[4, 6, 3]
+[2]
+Current State 167
+[1, 5]
+[6]
+[2, 3, 4]
+Current State 168
+[1, 5]
+[6]
+[2, 4, 3]
+Current State 169
+[1, 5]
+[6]
+[3, 2, 4]
+Current State 170
+[1, 5]
+[6]
+[3, 4, 2]
+Current State 171
+[1, 5]
+[6]
+[4, 3, 2]
+Current State 172
+[1, 5]
+[6, 3, 2]
+[4]
+Current State 173
+[1, 5]
+[6, 3]
+[4, 2]
+Current State 174
+[1, 5]
+[6]
+[4, 2, 3]
+Current State 175
+[1, 5]
+[6, 3, 4]
+[2]
+Current State 176
+[1, 5]
+[6, 4, 2]
+[3]
+Current State 177
+[1, 5]
+[6, 4, 3]
+[2]
+Current State 178
+[1, 5, 2]
+[3]
+[4, 6]
+Current State 179
+[1, 5, 2]
+[3, 6]
+[4]
+Current State 180
+[1, 5, 2]
+[4]
+[3, 6]
+Current State 181
+[1, 5, 2]
+[4, 6]
+[3]
+Current State 182
+[1, 5, 2]
+[6]
+[3, 4]
+Current State 183
+[1, 5, 2]
+[6]
+[4, 3]
+Current State 184
+[1, 5, 2]
+[6, 3]
+[4]
+Current State 185
+[1, 5, 2]
+[6, 4]
+[3]
+Current State 186
+[1, 5, 3]
+[2]
+[4, 6]
+Current State 187
+[1, 5, 3]
+[2, 6]
+[4]
+Current State 188
+[1, 5, 3]
+[4]
+[2, 6]
+Current State 189
+[1, 5, 3]
+[4, 2, 6]
+[]
+Current State 190
+[1, 5, 3]
+[4, 6]
+[2]
+Current State 191
+[1, 5, 3]
+[6]
+[2, 4]
+Current State 192
+[1, 5, 3]
+[6]
+[4, 2]
+Current State 193
+[1, 5, 3]
+[6, 2, 4]
+[]
+Current State 194
+[1, 5, 3]
+[6, 4]
+[2]
+Current State 195
+[1, 5, 6]
+[2]
+[3, 4]
+Current State 196
+[1, 5, 6]
+[2]
+[4, 3]
+Current State 197
+[1, 5, 6]
+[2, 3]
+[4]
+Current State 198
+[1, 5, 6]
+[2, 4]
+[3]
+Current State 199
+[1, 5, 6]
+[3]
+[2, 4]
+Current State 200
+[1, 5, 6]
+[3]
+[4, 2]
+Current State 201
+[1, 5, 6]
+[3, 2, 4]
+[]
+Current State 202
+[1, 5, 6]
+[3, 4]
+[2]
+Current State 203
+[1, 5, 6]
+[4]
+[2, 3]
+Current State 204
+[1, 5, 6]
+[4]
+[3, 2]
+Current State 205
+[1, 5, 6]
+[4, 2, 3]
+[]
+Current State 206
+[1, 5, 6]
+[4, 3]
+[2]
+Current State 207
+[1, 6]
+[3, 2, 5]
+[4]
+Current State 208
+[1, 6, 4]
+[3, 2, 5]
+[]
+Current State 209
+[1, 6, 4]
+[3, 2]
+[5]
+Current State 210
+[1, 6, 4]
+[3]
+[5, 2]
+Current State 211
+[1, 6]
+[3, 2]
+[5, 4]
+Current State 212
+[1, 6, 4, 5]
+[3, 2]
+[]
+Current State 213
+[1, 6, 4]
+[]
+[5, 2, 3]
+Current State 214
+[1]
+[3, 2]
+[5, 4, 6]
+Current State 215
+[1]
+[3, 2, 6]
+[5, 4]
+Current State 216
+[1, 4]
+[3, 2, 6]
+[5]
+Current State 217
+[1, 4]
+[3, 2]
+[5, 6]
+Current State 218
+[1]
+[3, 2]
+[5, 6, 4]
+Current State 219
+[1]
+[3, 2, 4]
+[5, 6]
+Current State 220
+[1, 4, 6]
+[3, 2]
+[5]
+Current State 221
+[1, 6]
+[3, 2, 4]
+[5]
+Current State 222
+[1, 6]
+[4, 2, 5]
+[3]
+Current State 223
+[1, 6, 5]
+[3, 2]
+[4]
+Current State 224
+[1, 6, 5]
+[4, 2]
+[3]
+Current State 225
+[1, 3, 4, 2]
+[6]
+[5]
+Current State 226
+[1, 3, 4, 5]
+[6]
+[2]
+Current State 227
+[1, 3, 4]
+[6]
+[2, 5]
+Current State 228
+[1, 3, 4]
+[6, 5]
+[2]
+Current State 229
+[1, 3, 4]
+[]
+[2, 5, 6]
+Current State 230
+[1, 3, 4]
+[6, 5, 2]
+[]
+Current State 231
+[1, 6, 4, 2]
+[3]
+[5]
+Current State 232
+[1, 6, 4, 5]
+[3]
+[2]
+Current State 233
+[1, 6, 4]
+[3]
+[2, 5]
+Current State 234
+[1, 6, 4]
+[3, 5]
+[2]
+Current State 235
+[1, 6, 4]
+[]
+[2, 5, 3]
+Current State 236
+[1, 6, 4]
+[3, 5, 2]
+[]
+Current State 237
+[1, 3]
+[6, 4]
+[2, 5]
+Current State 238
+[1, 3]
+[6, 4]
+[5, 2]
+Current State 239
+[1, 3]
+[6, 5]
+[2, 4]
+Current State 240
+[1, 6]
+[3, 4]
+[2, 5]
+Current State 241
+[1, 6]
+[3, 4]
+[5, 2]
+Current State 242
+[1, 6]
+[3, 5]
+[2, 4]
+Current State 243
+[1, 3, 4, 2]
+[]
+[5, 6]
+Current State 244
+[1, 3, 4]
+[2]
+[5, 6]
+Current State 245
+[1, 3, 4]
+[2, 6]
+[5]
+Current State 246
+[1, 3, 4]
+[]
+[5, 6, 2]
+Current State 247
+[1, 3, 4]
+[2, 6, 5]
+[]
+Current State 248
+[1, 3, 4, 6]
+[2]
+[5]
+Current State 249
+[1, 3]
+[2, 4]
+[5, 6]
+Current State 250
+[1, 3]
+[2, 6]
+[5, 4]
+Current State 251
+[1, 3, 4, 2]
+[6, 5]
+[]
+Current State 252
+[1, 3, 4, 5]
+[]
+[2, 6]
+Current State 253
+[1, 3, 4]
+[5]
+[2, 6]
+Current State 254
+[1, 3, 4]
+[5, 6]
+[2]
+Current State 255
+[1, 3, 4]
+[]
+[2, 6, 5]
+Current State 256
+[1, 3, 4]
+[5, 6, 2]
+[]
+Current State 257
+[1, 3, 4, 6]
+[5]
+[2]
+Current State 258
+[1, 3, 4, 6]
+[5, 2]
+[]
+Current State 259
+[1, 3, 4]
+[5, 2]
+[6]
+Current State 260
+[1, 3, 4]
+[5]
+[6, 2]
+Current State 261
+[1, 3, 4]
+[5, 2, 6]
+[]
+Current State 262
+[1, 3]
+[5, 2]
+[6, 4]
+Current State 263
+[1, 3, 4]
+[]
+[6, 2, 5]
+Current State 264
+[1]
+[5, 2]
+[6, 4, 3]
+Current State 265
+[1]
+[5, 2, 3]
+[6, 4]
+Current State 266
+[1, 3]
+[5, 2, 4]
+[6]
+Current State 267
+[1]
+[5, 2, 4]
+[6, 3]
+Current State 268
+[1, 4]
+[5, 2]
+[6, 3]
+Current State 269
+[1]
+[5, 2]
+[6, 3, 4]
+Current State 270
+[1, 4]
+[5, 2, 3]
+[6]
+Current State 271
+[1, 4, 3]
+[5, 2]
+[6]
+Current State 272
+[1, 3]
+[5, 2, 6]
+[4]
+Current State 273
+[1, 3]
+[5, 2]
+[4, 6]
+Current State 274
+[1]
+[5, 2]
+[4, 6, 3]
+Current State 275
+[1]
+[5, 2, 3]
+[4, 6]
+Current State 276
+[1]
+[5, 2, 6]
+[4, 3]
+Current State 277
+[1, 6]
+[5, 2]
+[4, 3]
+Current State 278
+[1]
+[5, 2]
+[4, 3, 6]
+Current State 279
+[1, 3, 4, 2]
+[5]
+[6]
+Current State 280
+[1, 3, 6]
+[5, 2]
+[4]
+Current State 281
+[1, 6]
+[5, 2, 3]
+[4]
+Current State 282
+[1, 6, 4]
+[5, 2, 3]
+[]
+Current State 283
+[1, 6, 4]
+[5, 2]
+[3]
+Current State 284
+[1, 6, 4]
+[5]
+[3, 2]
+Current State 285
+[1, 6]
+[5, 2]
+[3, 4]
+Current State 286
+[1, 6, 4, 3]
+[5, 2]
+[]
+Current State 287
+[1, 6, 4]
+[]
+[3, 2, 5]
+Current State 288
+[1]
+[5, 2]
+[3, 4, 6]
+Current State 289
+[1]
+[5, 2, 6]
+[3, 4]
+Current State 290
+[1, 4]
+[5, 2, 6]
+[3]
+Current State 291
+[1, 4]
+[5, 2]
+[3, 6]
+Current State 292
+[1]
+[5, 2]
+[3, 6, 4]
+Current State 293
+[1]
+[5, 2, 4]
+[3, 6]
+Current State 294
+[1, 4, 6]
+[5, 2]
+[3]
+Current State 295
+[1, 6]
+[5, 2, 4]
+[3]
+Current State 296
+[1, 6, 3]
+[5, 2]
+[4]
+Current State 297
+[1, 3]
+[5, 4]
+[6, 2]
+Current State 298
+[1, 6, 4, 2]
+[5]
+[3]
+Current State 299
+[1, 6, 4, 3]
+[5]
+[2]
+Current State 300
+[1, 6, 4]
+[5]
+[2, 3]
+Current State 301
+[1, 6, 4]
+[5, 3]
+[2]
+Current State 302
+[1, 6, 4]
+[]
+[2, 3, 5]
+Current State 303
+[1, 6, 4]
+[5, 3, 2]
+[]
+Current State 304
+[1, 3]
+[5, 4]
+[2, 6]
+Current State 305
+[1, 3]
+[5, 6]
+[2, 4]
+Current State 306
+[1, 3, 4, 2]
+[]
+[6, 5]
+Current State 307
+[1, 3, 4]
+[2]
+[6, 5]
+Current State 308
+[1, 3, 4]
+[2, 5]
+[6]
+Current State 309
+[1, 3, 4]
+[]
+[6, 5, 2]
+Current State 310
+[1, 3, 4]
+[2, 5, 6]
+[]
+Current State 311
+[1, 3, 4, 5]
+[2]
+[6]
+Current State 312
+[1, 3]
+[2, 4]
+[6, 5]
+Current State 313
+[1, 3]
+[2, 5]
+[6, 4]
+Current State 314
+[1, 3, 4, 5]
+[]
+[6, 2]
+Current State 315
+[1, 6]
+[5, 3]
+[2, 4]
+Current State 316
+[1, 6]
+[5, 4]
+[2, 3]
+Current State 317
+[1, 6]
+[5, 4]
+[3, 2]
+Current State 318
+[1, 3, 4, 2]
+[5, 6]
+[]
+Current State 319
+[1, 3, 4, 5]
+[2, 6]
+[]
+Current State 320
+[1, 3, 4, 6]
+[]
+[2, 5]
+Current State 321
+[1, 3, 4, 6]
+[]
+[5, 2]
+Current State 322
+[1, 3, 4, 6]
+[2, 5]
+[]
+Current State 323
+[1, 6, 4, 2]
+[]
+[3, 5]
+Current State 324
+[1, 6, 4]
+[2]
+[3, 5]
+Current State 325
+[1, 6, 4]
+[2, 5]
+[3]
+Current State 326
+[1, 6, 4]
+[]
+[3, 5, 2]
+Current State 327
+[1, 6, 4]
+[2, 5, 3]
+[]
+Current State 328
+[1, 6, 4, 5]
+[2]
+[3]
+Current State 329
+[1, 6]
+[2, 4]
+[3, 5]
+Current State 330
+[1, 6]
+[2, 5]
+[3, 4]
+Current State 331
+[1, 6, 4, 2]
+[]
+[5, 3]
+Current State 332
+[1, 6, 4]
+[2]
+[5, 3]
+Current State 333
+[1, 6, 4]
+[2, 3]
+[5]
+Current State 334
+[1, 6, 4]
+[]
+[5, 3, 2]
+Current State 335
+[1, 6, 4]
+[2, 3, 5]
+[]
+Current State 336
+[1, 6, 4, 3]
+[2]
+[5]
+Current State 337
+[1, 6]
+[2, 3]
+[5, 4]
+Current State 338
+[1, 6]
+[2, 4]
+[5, 3]
+Current State 339
+[1, 6, 4, 2]
+[3, 5]
+[]
+Current State 340
+[1, 6, 4, 2]
+[5, 3]
+[]
+Current State 341
+[1, 6, 4, 3]
+[]
+[2, 5]
+Current State 342
+[1, 6, 4, 3]
+[]
+[5, 2]
+Current State 343
+[1, 6, 4, 3]
+[2, 5]
+[]
+Current State 344
+[1, 6, 4, 5]
+[]
+[2, 3]
+Current State 345
+[1, 6, 4, 5]
+[]
+[3, 2]
+Current State 346
+[1, 6, 4, 5]
+[2, 3]
+[]
+Current State 347
+[]
+[3, 2, 1]
+[6, 4, 5]
+Current State 348
+[5]
+[3, 2, 1]
+[6, 4]
+Current State 349
+[5, 1]
+[3, 2]
+[6, 4]
+Current State 350
+[5, 1, 4]
+[3, 2]
+[6]
+Current State 351
+[5, 1, 4]
+[3]
+[6, 2]
+Current State 352
+[5, 1, 4]
+[3, 2, 6]
+[]
+Current State 353
+[5, 1, 4]
+[]
+[6, 2, 3]
+Current State 354
+[5, 1, 4, 6]
+[3, 2]
+[]
+Current State 355
+[5]
+[3, 2]
+[6, 4, 1]
+Current State 356
+[5, 1]
+[3, 2, 4]
+[6]
+Current State 357
+[5]
+[3, 2, 4]
+[6, 1]
+Current State 358
+[5, 4]
+[3, 2]
+[6, 1]
+Current State 359
+[5]
+[3, 2]
+[6, 1, 4]
+Current State 360
+[5, 4]
+[3, 2, 1]
+[6]
+Current State 361
+[5, 4, 1]
+[3, 2]
+[6]
+Current State 362
+[5, 1]
+[3, 2, 6]
+[4]
+Current State 363
+[5, 1]
+[3, 2]
+[4, 6]
+Current State 364
+[5]
+[3, 2]
+[4, 6, 1]
+Current State 365
+[5]
+[3, 2, 1]
+[4, 6]
+Current State 366
+[5]
+[3, 2, 6]
+[4, 1]
+Current State 367
+[5, 6]
+[3, 2]
+[4, 1]
+Current State 368
+[5]
+[3, 2]
+[4, 1, 6]
+Current State 369
+[5, 1, 4, 2]
+[3]
+[6]
+Current State 370
+[5, 1, 6]
+[3, 2]
+[4]
+Current State 371
+[5, 6]
+[3, 2, 1]
+[4]
+Current State 372
+[5, 6, 4]
+[3, 2, 1]
+[]
+Current State 373
+[5, 6, 4]
+[3, 2]
+[1]
+Current State 374
+[5, 6, 4]
+[3]
+[1, 2]
+Current State 375
+[5, 6]
+[3, 2]
+[1, 4]
+Current State 376
+[5, 6, 4, 1]
+[3, 2]
+[]
+Current State 377
+[5, 6, 4]
+[]
+[1, 2, 3]
+Current State 378
+[5]
+[3, 2]
+[1, 4, 6]
+Current State 379
+[5]
+[3, 2, 6]
+[1, 4]
+Current State 380
+[5, 4]
+[3, 2, 6]
+[1]
+Current State 381
+[5, 4]
+[3, 2]
+[1, 6]
+Current State 382
+[5]
+[3, 2]
+[1, 6, 4]
+Current State 383
+[5]
+[3, 2, 4]
+[1, 6]
+Current State 384
+[5, 4, 6]
+[3, 2]
+[1]
+Current State 385
+[5, 6]
+[3, 2, 4]
+[1]
+Current State 386
+[5, 6, 1]
+[3, 2]
+[4]
+Current State 387
+[5, 1]
+[3, 4]
+[6, 2]
+Current State 388
+[5, 1, 4, 6]
+[3]
+[2]
+Current State 389
+[5, 1, 4]
+[3]
+[2, 6]
+Current State 390
+[5, 1, 4]
+[3, 6]
+[2]
+Current State 391
+[5, 1, 4]
+[]
+[2, 6, 3]
+Current State 392
+[5, 1, 4]
+[3, 6, 2]
+[]
+Current State 393
+[5, 6, 4, 1]
+[3]
+[2]
+Current State 394
+[5, 6, 4]
+[3]
+[2, 1]
+Current State 395
+[5, 6, 4]
+[3, 1]
+[2]
+Current State 396
+[5, 6, 4]
+[]
+[2, 1, 3]
+Current State 397
+[5, 6, 4]
+[3, 1, 2]
+[]
+Current State 398
+[5, 6, 4, 2]
+[3]
+[1]
+Current State 399
+[5, 1]
+[3, 4]
+[2, 6]
+Current State 400
+[5, 1]
+[3, 6]
+[2, 4]
+Current State 401
+[5, 1, 4, 2]
+[]
+[6, 3]
+Current State 402
+[5, 1, 4]
+[2]
+[6, 3]
+Current State 403
+[5, 1, 4]
+[2, 3]
+[6]
+Current State 404
+[5, 1, 4]
+[]
+[6, 3, 2]
+Current State 405
+[5, 1, 4]
+[2, 3, 6]
+[]
+Current State 406
+[5, 1, 4, 3]
+[2]
+[6]
+Current State 407
+[5, 1]
+[2, 3]
+[6, 4]
+Current State 408
+[5, 1]
+[2, 4]
+[6, 3]
+Current State 409
+[5, 1, 4, 3]
+[]
+[6, 2]
+Current State 410
+[5, 6]
+[3, 1]
+[2, 4]
+Current State 411
+[5, 6]
+[3, 4]
+[1, 2]
+Current State 412
+[5, 6]
+[3, 4]
+[2, 1]
+Current State 413
+[5, 1, 4, 2]
+[3, 6]
+[]
+Current State 414
+[5, 1, 4, 3]
+[]
+[2, 6]
+Current State 415
+[5, 1, 4, 3]
+[6]
+[2]
+Current State 416
+[5, 1, 4]
+[6]
+[2, 3]
+Current State 417
+[5, 1, 4]
+[6, 3]
+[2]
+Current State 418
+[5, 1, 4, 3]
+[6, 2]
+[]
+Current State 419
+[5, 1, 4]
+[6, 2]
+[3]
+Current State 420
+[5, 1, 4]
+[6]
+[3, 2]
+Current State 421
+[5, 1, 4]
+[6, 2, 3]
+[]
+Current State 422
+[5, 1]
+[6, 2]
+[3, 4]
+Current State 423
+[5, 1, 4]
+[]
+[2, 3, 6]
+Current State 424
+[5, 1, 4]
+[]
+[3, 2, 6]
+Current State 425
+[5, 1, 4]
+[6, 3, 2]
+[]
+Current State 426
+[5]
+[6, 2]
+[3, 4, 1]
+Current State 427
+[5]
+[6, 2, 1]
+[3, 4]
+Current State 428
+[5, 1]
+[6, 2, 3]
+[4]
+Current State 429
+[5, 1]
+[6, 2]
+[4, 3]
+Current State 430
+[5]
+[6, 2]
+[4, 3, 1]
+Current State 431
+[5]
+[6, 2, 1]
+[4, 3]
+Current State 432
+[5]
+[6, 2, 3]
+[4, 1]
+Current State 433
+[5, 3]
+[6, 2]
+[4, 1]
+Current State 434
+[5]
+[6, 2]
+[4, 1, 3]
+Current State 435
+[5, 1]
+[6, 2, 4]
+[3]
+Current State 436
+[5]
+[6, 2, 4]
+[3, 1]
+Current State 437
+[5, 4]
+[6, 2]
+[3, 1]
+Current State 438
+[5]
+[6, 2]
+[3, 1, 4]
+Current State 439
+[5, 1, 3]
+[6, 2]
+[4]
+Current State 440
+[5, 3]
+[6, 2, 1]
+[4]
+Current State 441
+[5, 3, 4]
+[6, 2, 1]
+[]
+Current State 442
+[5, 3, 4]
+[6, 2]
+[1]
+Current State 443
+[5, 3, 4]
+[6]
+[1, 2]
+Current State 444
+[5, 3]
+[6, 2]
+[1, 4]
+Current State 445
+[5, 3, 4, 1]
+[6, 2]
+[]
+Current State 446
+[5, 3, 4]
+[]
+[1, 2, 6]
+Current State 447
+[5]
+[6, 2]
+[1, 4, 3]
+Current State 448
+[5]
+[6, 2, 3]
+[1, 4]
+Current State 449
+[5, 3]
+[6, 2, 4]
+[1]
+Current State 450
+[5]
+[6, 2, 4]
+[1, 3]
+Current State 451
+[5, 4]
+[6, 2]
+[1, 3]
+Current State 452
+[5]
+[6, 2]
+[1, 3, 4]
+Current State 453
+[5, 3, 1]
+[6, 2]
+[4]
+Current State 454
+[5, 4]
+[6, 2, 1]
+[3]
+Current State 455
+[5, 4]
+[6, 2, 3]
+[1]
+Current State 456
+[5, 4, 1]
+[6, 2]
+[3]
+Current State 457
+[5, 4, 3]
+[6, 2]
+[1]
+Current State 458
+[5, 1, 4, 2]
+[6]
+[3]
+Current State 459
+[5, 3, 4, 1]
+[6]
+[2]
+Current State 460
+[5, 3, 4]
+[6]
+[2, 1]
+Current State 461
+[5, 3, 4]
+[6, 1]
+[2]
+Current State 462
+[5, 3, 4]
+[]
+[2, 1, 6]
+Current State 463
+[5, 3, 4]
+[6, 1, 2]
+[]
+Current State 464
+[5, 3, 4, 2]
+[6]
+[1]
+Current State 465
+[5, 1]
+[6, 3]
+[2, 4]
+Current State 466
+[5, 1]
+[6, 4]
+[2, 3]
+Current State 467
+[5, 1]
+[6, 4]
+[3, 2]
+Current State 468
+[5, 3]
+[6, 1]
+[2, 4]
+Current State 469
+[5, 3]
+[6, 4]
+[1, 2]
+Current State 470
+[5, 3]
+[6, 4]
+[2, 1]
+Current State 471
+[5, 1, 4, 2]
+[]
+[3, 6]
+Current State 472
+[5, 1, 4]
+[2]
+[3, 6]
+Current State 473
+[5, 1, 4]
+[2, 6]
+[3]
+Current State 474
+[5, 1, 4]
+[]
+[3, 6, 2]
+Current State 475
+[5, 1, 4]
+[2, 6, 3]
+[]
+Current State 476
+[5, 1, 4, 6]
+[2]
+[3]
+Current State 477
+[5, 1]
+[2, 4]
+[3, 6]
+Current State 478
+[5, 1]
+[2, 6]
+[3, 4]
+Current State 479
+[5, 1, 4, 2]
+[6, 3]
+[]
+Current State 480
+[5, 1, 4, 3]
+[2, 6]
+[]
+Current State 481
+[5, 1, 4, 6]
+[]
+[2, 3]
+Current State 482
+[5, 1, 4, 6]
+[]
+[3, 2]
+Current State 483
+[5, 1, 4, 6]
+[2, 3]
+[]
+Current State 484
+[5, 3, 4, 1]
+[]
+[2, 6]
+Current State 485
+[5, 3, 4]
+[1]
+[2, 6]
+Current State 486
+[5, 3, 4]
+[1, 6]
+[2]
+Current State 487
+[5, 3, 4]
+[1, 6, 2]
+[]
+Current State 488
+[5, 3, 4]
+[]
+[2, 6, 1]
+Current State 489
+[5, 3, 4, 6]
+[1]
+[2]
+Current State 490
+[5, 3, 4, 6]
+[1, 2]
+[]
+Current State 491
+[5, 3, 4]
+[1, 2]
+[6]
+Current State 492
+[5, 3, 4]
+[1]
+[6, 2]
+Current State 493
+[5, 3, 4]
+[1, 2, 6]
+[]
+Current State 494
+[5, 3]
+[1, 2]
+[6, 4]
+Current State 495
+[5]
+[1, 2]
+[6, 4, 3]
+Current State 496
+[5]
+[1, 2, 3]
+[6, 4]
+Current State 497
+[5, 3]
+[1, 2, 4]
+[6]
+Current State 498
+[5]
+[1, 2, 4]
+[6, 3]
+Current State 499
+[5, 4]
+[1, 2]
+[6, 3]
+Current State 500
+[5]
+[1, 2]
+[6, 3, 4]
+Current State 501
+[5, 3, 4]
+[]
+[6, 2, 1]
+Current State 502
+[5, 4]
+[1, 2, 3]
+[6]
+Current State 503
+[5, 4, 3]
+[1, 2]
+[6]
+Current State 504
+[5, 3]
+[1, 2, 6]
+[4]
+Current State 505
+[5, 3]
+[1, 2]
+[4, 6]
+Current State 506
+[5]
+[1, 2]
+[4, 6, 3]
+Current State 507
+[5]
+[1, 2, 3]
+[4, 6]
+Current State 508
+[5]
+[1, 2, 6]
+[4, 3]
+Current State 509
+[5, 6]
+[1, 2]
+[4, 3]
+Current State 510
+[5]
+[1, 2]
+[4, 3, 6]
+Current State 511
+[5, 3, 4, 2]
+[1]
+[6]
+Current State 512
+[5, 3, 6]
+[1, 2]
+[4]
+Current State 513
+[5, 6]
+[1, 2, 3]
+[4]
+Current State 514
+[5, 6, 4]
+[1, 2, 3]
+[]
+Current State 515
+[5, 6, 4]
+[1, 2]
+[3]
+Current State 516
+[5, 6, 4]
+[1]
+[3, 2]
+Current State 517
+[5, 6]
+[1, 2]
+[3, 4]
+Current State 518
+[5, 6, 4, 3]
+[1, 2]
+[]
+Current State 519
+[5]
+[1, 2]
+[3, 4, 6]
+Current State 520
+[5]
+[1, 2, 6]
+[3, 4]
+Current State 521
+[5, 4]
+[1, 2, 6]
+[3]
+Current State 522
+[5, 4]
+[1, 2]
+[3, 6]
+Current State 523
+[5]
+[1, 2]
+[3, 6, 4]
+Current State 524
+[5]
+[1, 2, 4]
+[3, 6]
+Current State 525
+[5, 4, 6]
+[1, 2]
+[3]
+Current State 526
+[5, 6]
+[1, 2, 4]
+[3]
+Current State 527
+[5, 6, 3]
+[1, 2]
+[4]
+Current State 528
+[5, 6, 4]
+[]
+[3, 2, 1]
+Current State 529
+[5, 3]
+[1, 4]
+[6, 2]
+Current State 530
+[5, 6, 4, 2]
+[1]
+[3]
+Current State 531
+[5, 6, 4, 3]
+[1]
+[2]
+Current State 532
+[5, 6, 4]
+[1]
+[2, 3]
+Current State 533
+[5, 6, 4]
+[1, 3]
+[2]
+Current State 534
+[5, 6, 4]
+[1, 3, 2]
+[]
+Current State 535
+[5, 6, 4]
+[]
+[2, 3, 1]
+Current State 536
+[5, 3]
+[1, 4]
+[2, 6]
+Current State 537
+[5, 3]
+[1, 6]
+[2, 4]
+Current State 538
+[5, 6]
+[1, 3]
+[2, 4]
+Current State 539
+[5, 6]
+[1, 4]
+[2, 3]
+Current State 540
+[5, 6]
+[1, 4]
+[3, 2]
+Current State 541
+[5, 3, 4, 1]
+[]
+[6, 2]
+Current State 542
+[5, 3, 4, 1]
+[2]
+[6]
+Current State 543
+[5, 3, 4]
+[2]
+[6, 1]
+Current State 544
+[5, 3, 4]
+[2, 1]
+[6]
+Current State 545
+[5, 3, 4]
+[]
+[6, 1, 2]
+Current State 546
+[5, 3, 4]
+[2, 1, 6]
+[]
+Current State 547
+[5, 3]
+[2, 1]
+[6, 4]
+Current State 548
+[5, 3]
+[2, 4]
+[6, 1]
+Current State 549
+[5, 3, 4, 2]
+[]
+[6, 1]
+Current State 550
+[5, 3, 4, 2]
+[1, 6]
+[]
+Current State 551
+[5, 6, 4, 2]
+[1, 3]
+[]
+Current State 552
+[]
+[1, 2, 3]
+[6, 4, 5]
+Current State 553
+[3]
+[1, 2]
+[6, 4, 5]
+Current State 554
+[3, 5]
+[1, 2]
+[6, 4]
+Current State 555
+[3, 5, 4]
+[1, 2]
+[6]
+Success! Number of states explored are 555
+()
+#######################################################################################################################################
+#######################################################################################################################################
+#######################################################################################################################################
+#######################################################################################################################################
+#######################################################################################################################################
+()
+For Hill Climbing in StateHeuristic, States are
+Current State 1
+[1, 4, 5]
+[6, 2]
+[3]
+Current State 2
+[1, 4, 5]
+[6, 2, 3]
+[]
+Current State 3
+[1, 4]
+[6, 2, 3]
+[5]
+Current State 4
+[1, 4, 3]
+[6, 2]
+[5]
+Current State 5
+[1, 4, 3]
+[6, 2, 5]
+[]
+Current State 6
+[1, 4]
+[6, 2, 5, 3]
+[]
+Current State 7
+[1]
+[6, 2, 5, 3]
+[4]
+Current State 8
+[1, 3]
+[6, 2, 5]
+[4]
+Current State 9
+[1, 3, 4]
+[6, 2, 5]
+[]
+Current State 10
+[1, 3, 4, 5]
+[6, 2]
+[]
+Stuck at local maxima
+There is no solution for Hill Climbing approach with this Heuristic and number of states explored are 10
+#######################################################################################################################################
+()
+For Hill Climbing in HeightHeuristic, States are 
+Current State 1
+[1, 4, 5]
+[6, 2]
+[3]
+Current State 2
+[1, 4]
+[6, 2]
+[3, 5]
+Stuck at local maxima
+There is no solution for Hill Climbing approach with this Heuristic and number of states explored are 2
+#######################################################################################################################################
+()
+For Hill Climbing in HeightSquareHeuristic, States are
+Current State 1
+[1, 4, 5]
+[6, 2]
+[3]
+Current State 2
+[1, 4]
+[6, 2]
+[3, 5]
+Stuck at local maxima
+There is no solution for Hill Climbing approach with this Heuristic and number of states explored are 2
+#######################################################################################################################################
